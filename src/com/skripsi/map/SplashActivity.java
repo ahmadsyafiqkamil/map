@@ -21,7 +21,6 @@ public class SplashActivity extends Activity{
 		isInternetPresent = connection.isConnectingToInternet();
 		
 		new Handler().postDelayed(new Runnable() {
-			
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
@@ -29,10 +28,7 @@ public class SplashActivity extends Activity{
 					Intent intent = new Intent(SplashActivity.this,HomeActivity.class);
 					startActivity(intent);
 					finish();
-				}else {
-					Toast.makeText(getApplicationContext(), "No Connection", Toast.LENGTH_SHORT).show();
-					finish();
-				}
+				
 			}
 		}, 3000);
 		
